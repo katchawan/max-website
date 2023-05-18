@@ -1,0 +1,41 @@
+.nav--container {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    width: 100%;
+    height: 5rem;
+    background-color: rgba(255, 255, 255, 0.423);
+    z-index: 9999;
+}
+
+.link--container{
+    display: flex;
+    flex-direction: row;
+    margin-right: 25px;
+    gap: 25px;
+}
+
+.nav--container a:link,
+.nav--container a:active,
+.nav--container a:visited {
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.nav--container a:hover {
+    color: rgb(129, 129, 129);
+    text-decoration: underline;
+
+}
+
+.nav--container h1 {
+    margin-left: 25px;
+    font-family: 'Mulish', sans-serif;
+}
+

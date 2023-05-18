@@ -1,0 +1,46 @@
+.home--container {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.all--projects--container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+.project--container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 40rem;
+  min-width: 400px;
+  cursor: pointer;
+}
+
+.text--overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: white;
+  transition: opacity 0.3s;
+  z-index: 2;
+  pointer-events: none; 
+}
+
+.project--container:hover .text--overlay {
+  opacity: 1;
+}
+
+.project--cover {
+  transition: filter 0.3s;
+  min-height: 376px;
+}
+.project--cover:hover {
+  filter: brightness(0.6);
+}
