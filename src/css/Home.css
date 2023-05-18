@@ -12,8 +12,9 @@
 
 
 .project--container {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  display: inline-block;
   width: 100%;
   max-width: 35rem;
   min-width: 400px;
