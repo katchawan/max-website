@@ -1,5 +1,4 @@
 .home--container {
-  margin-top: 2rem;
   width: 100%;
 }
 
@@ -16,21 +15,23 @@
   position: relative;
   display: inline-block;
   width: 100%;
-  max-width: 40rem;
+  max-width: 35rem;
   min-width: 400px;
   cursor: pointer;
 }
-
+ 
 .text--overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 20%;
+  left: 20%;
   transform: translate(-50%, -50%);
   opacity: 0;
   color: white;
   transition: opacity 0.3s;
   z-index: 2;
   pointer-events: none; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);;
 }
 
 .project--container:hover .text--overlay {
@@ -41,6 +42,7 @@
   transition: filter 0.3s;
   min-height: 376px;
 }
+
 .project--cover:hover {
-  filter: brightness(0.6);
+  filter: brightness(0.5);
 }

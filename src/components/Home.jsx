@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import '../css/Home.css';
 import projects from '../data/projects';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 const Home = () => {
-  const navigate = useNavigate();
+const videoRefs = useRef({})
+const navigate = useNavigate();
+
+  const handleMouseOver = (projectid) => {
+    console.log('hovered', projectid)
+    const video = videoRefs.current[projectid]
+    if (video) {
+      video.play()
+      
+    }
+  }
+
+  const handleMouseLeave = (projectid) => {
+    const video = videoRefs.current[projectid]
+    if (video) {
+      video.pause()
+    }
+  }
 
   const handleProjectClick = (projectid) => {
     navigate(`projectView/${projectid}`);
@@ -19,11 +36,19 @@ const Home = () => {
     >
       <div className='all--projects--container'>
         {projects.map((project) => (
-          <div key={project.id} className='project--container'>
-            <img 
+          <div 
+          key={project.id} 
+          className='project--container'
+          onMouseEnter={() => handleMouseOver(project.id)}
+          onMouseLeave={() => handleMouseLeave(project.id)}
+          >
+            <video 
             className='project--cover' 
-            src={project.poster} 
-            alt='dentek'
+            src={project.source} 
+            type='video/mp4'
+            loop
+            muted
+            ref={(videoRef) => (videoRefs.current[project.id] = videoRef)}
             onClick={() => handleProjectClick(project.id)}
             /> 
             <h1 className='text--overlay'>{project.title}</h1>
