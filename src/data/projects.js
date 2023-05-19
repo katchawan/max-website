@@ -1,6 +1,7 @@
 const projects = [
     {
       id: '1',
+      password: "yes123",
       title: "elden ring",
       company: "Kitty company",
       poster: "/photos/eldenring.png",

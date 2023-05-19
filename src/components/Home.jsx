@@ -1,36 +1,38 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import '../css/Home.css';
+import Modal from 'react-modal'
 import projects from '../data/projects';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Home = () => {
-const videoRefs = useRef({})
+const [ isModalOpen, setIsModalOpen ] = useState(false)
+const [ password, setPassword ] = useState('')
+const [ selectedProject, setSelectedProject ] = useState(null)
+const [ passwordError, setPasswordError ] = useState(false)
 const navigate = useNavigate();
 
-const handleMouseOver = (projectid) => {
-  console.log('hovered', projectid);
-  const video = videoRefs.current[projectid];
-
-  if (video && window.innerWidth >= 768) {
-    try {
-      video.play();
-    } catch (error) {
-      console.error('Error playing video:', error);
-    }
+const handleProjectClick = (project) => {
+  if (project.password) { 
+    setSelectedProject(project)
+    setIsModalOpen(true)
+  } else {
+    navigate(`projectView/${project.id}`);
   }
 };
 
-  const handleMouseLeave = (projectid) => {
-    const video = videoRefs.current[projectid]
-    if (video) {
-      video.pause()
-    }
+const handlePassword = () => {
+  if (password === selectedProject.password) {
+    navigate(`projectView/${selectedProject.id}`)
+  } else {
+    setPasswordError(true)
+    setIsModalOpen(true)
+    setPassword(password)
+    return;
   }
-
-  const handleProjectClick = (projectid) => {
-    navigate(`projectView/${projectid}`);
-  };
+  setIsModalOpen(false)
+  setPassword('')
+}
 
   return (
     <motion.div 
@@ -44,23 +46,34 @@ const handleMouseOver = (projectid) => {
           <div 
           key={project.id} 
           className='project--container'
-          onMouseEnter={() => handleMouseOver(project.id)}
-          onMouseLeave={() => handleMouseLeave(project.id)}
+
           >
-            <video 
+            <img 
             className='project--cover' 
-            poster={project.poster}
-            src={project.source} 
-            type='video/mp4'
-            loop
-            muted
-            preload="auto"
-            ref={(videoRef) => (videoRefs.current[project.id] = videoRef)}
-            onClick={() => handleProjectClick(project.id)}
+            src={project.poster}
+            alt='posterimage'
+            onClick={() => handleProjectClick(project)}
             /> 
-            
+            <h1 className='text--overlay'>{project.title}</h1>
           </div>
         ))}
+        <Modal
+          isOpen={isModalOpen}
+          onRequestClose={() => setIsModalOpen(false)}
+          contentLabel='Password Prompt'
+          className='modal--content'
+          overlayClassName='modal--overlay'
+          >
+            <h2>PASSWORD</h2>
+            <div className='input--btn'>
+            <input 
+            type='password' 
+            onChange={(e) => setPassword(e.target.value)}
+            className={passwordError ? 'error' : ''}
+            />
+            <button onClick={handlePassword}>Submit</button>
+            </div>
+          </Modal>
       </div>
     </motion.div>
   );
