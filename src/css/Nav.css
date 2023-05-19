@@ -22,8 +22,9 @@
 .nav--container a:active,
 .nav--container a:visited {
     text-decoration: none;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 300;
     color: black;
-    font-size: larger;
     cursor: pointer;
     transition: 0.1s;
 }
@@ -37,5 +38,6 @@
 .nav--container h1 {
     margin-left: 25px;
     font-family: 'Mulish', sans-serif;
+    font-weight: 11;
 }
 

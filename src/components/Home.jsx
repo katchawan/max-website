@@ -11,7 +11,7 @@ const navigate = useNavigate();
 const handleMouseOver = (projectid) => {
   console.log('hovered', projectid);
   const video = videoRefs.current[projectid];
-  
+
   if (video && window.innerWidth >= 768) {
     try {
       video.play();
@@ -58,7 +58,7 @@ const handleMouseOver = (projectid) => {
             ref={(videoRef) => (videoRefs.current[project.id] = videoRef)}
             onClick={() => handleProjectClick(project.id)}
             /> 
-            <h1 className='text--overlay'>{project.title}</h1>
+            
           </div>
         ))}
       </div>
