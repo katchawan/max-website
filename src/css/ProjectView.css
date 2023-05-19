@@ -1,0 +1,12 @@
+.project--view--container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project--view--video {
+    width: 80%;
+    min-width: 400px;
+}

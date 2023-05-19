@@ -3,18 +3,23 @@ import '../css/Home.css';
 import projects from '../data/projects';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+
 const Home = () => {
 const videoRefs = useRef({})
 const navigate = useNavigate();
 
-  const handleMouseOver = (projectid) => {
-    console.log('hovered', projectid)
-    const video = videoRefs.current[projectid]
-    if (video) {
-      video.play()
-      
+const handleMouseOver = (projectid) => {
+  console.log('hovered', projectid);
+  const video = videoRefs.current[projectid];
+  
+  if (video && window.innerWidth >= 768) {
+    try {
+      video.play();
+    } catch (error) {
+      console.error('Error playing video:', error);
     }
   }
+};
 
   const handleMouseLeave = (projectid) => {
     const video = videoRefs.current[projectid]
@@ -44,10 +49,12 @@ const navigate = useNavigate();
           >
             <video 
             className='project--cover' 
+            poster={project.poster}
             src={project.source} 
             type='video/mp4'
             loop
             muted
+            preload="auto"
             ref={(videoRef) => (videoRefs.current[project.id] = videoRef)}
             onClick={() => handleProjectClick(project.id)}
             /> 
