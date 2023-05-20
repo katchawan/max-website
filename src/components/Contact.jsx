@@ -38,17 +38,9 @@ const Contact = () => {
         <textarea id="message" name="message" required></textarea>
         </div>
 
-        <button type="submit">Send Email</button>
+        <button type="submit" className='send--button'>Send Email</button>
 
     </form>
-
-      <p>
-        Alternatively, please send an email to{' '}
-        <a href={`mailto:${emailAddress}`} onClick={handleEmailClick}>
-          {emailAddress}
-        </a>
-        .
-      </p>
       </div>
     </motion.div>
   );

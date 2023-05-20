@@ -71,7 +71,7 @@ const handlePassword = () => {
             onChange={(e) => setPassword(e.target.value)}
             className={passwordError ? 'error' : ''}
             />
-            <button onClick={handlePassword}>Submit</button>
+            <button className='pass--btn' onClick={handlePassword}>Submit</button>
             </div>
           </Modal>
       </div>

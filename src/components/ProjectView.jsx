@@ -24,6 +24,19 @@ const ProjectView = () => {
         <source src={project.source} type='video/mp4'/>
         Your browser does not support this video type.
       </video>
+      <div className='project--gallery'>
+        <img src={project.imgs.img1} alt='projectimage' className='smaller--image'/>
+        <img src={project.imgs.img2} alt='projectimage' className='smaller--image'/>
+        <img src={project.imgs.img3} alt='projectimage' className='smaller--image'/>
+        <img src={project.imgs.img4} alt='projectimage' className='smaller--image'/>
+        <img src={project.imgs.img5} alt='projectimage' className='smaller--image'/>
+        <img src={project.imgs.img6} alt='projectimage' className='smaller--image'/>
+        <div className='bigger--gallery--photos'>
+        <img src={project.imgs.img7} alt='projectimage' className='bigger--image'/>
+        <img src={project.imgs.img8} alt='projectimage' className='bigger--image'/>
+        </div>
+        <img src={project.imgs.img9} alt='projectimage' className='huge--image'/>
+      </div>
     </motion.div>
   );
 };
