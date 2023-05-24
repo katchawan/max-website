@@ -3,11 +3,6 @@ import '../css/Contact.css';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
-  const emailAddress = 'coolkid79@gmail.com';
-
-  const handleEmailClick = () => {
-    window.location.href = `mailto:${emailAddress}`;
-  };
 
   return (
     <motion.div className='contact--page'

@@ -5,15 +5,18 @@ import projects from '../data/projects';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-const Home = () => {
+const Home = (props) => {
 const [ isModalOpen, setIsModalOpen ] = useState(false)
 const [ password, setPassword ] = useState('')
 const [ selectedProject, setSelectedProject ] = useState(null)
 const [ passwordError, setPasswordError ] = useState(false)
+
+
 const navigate = useNavigate();
 
 const handleProjectClick = (project) => {
   if (project.password) { 
+    props.setAuthenticated(true)
     setSelectedProject(project)
     setIsModalOpen(true)
   } else {
@@ -46,7 +49,6 @@ const handlePassword = () => {
           <div 
           key={project.id} 
           className='project--container'
-
           >
             <img 
             className='project--cover' 
@@ -68,7 +70,7 @@ const handlePassword = () => {
             <div className='input--btn'>
             <input 
             type='password' 
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value.toLowerCase())}
             className={passwordError ? 'error' : ''}
             />
             <button className='pass--btn' onClick={handlePassword}>Submit</button>

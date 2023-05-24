@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import {
@@ -7,17 +7,16 @@ import {
     ProjectView 
 } from './index';
 
-
-const CompTransitions = () => {
-
-    const location = useLocation();
-
+const CompTransitions = (props) => {
+  const location = useLocation();
+  const [ authenticated, setAuthenticated] = useState(false)
+  const { isNavbarClick, setIsNavbarClick} = props
   return (
-    <AnimatePresence>
+    <AnimatePresence onExitComplete={() => window.scrollTo(0, 0)}>
       <Routes location={location} key={location.pathname}>
-        <Route path='/' element={<Home />}/>
+        <Route path='/' element={<Home setAuthenticated={setAuthenticated}/>}/>
         <Route path='/contact' element={<Contact />}/>
-        <Route path='/projectView/:id' element={<ProjectView />}/>
+        <Route path='/projectView/:id' element={<ProjectView setIsNavbarClick={setIsNavbarClick} authenticated={authenticated} isNavbarClick={isNavbarClick}/>}/>
       </Routes>
     </AnimatePresence>
   )
