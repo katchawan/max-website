@@ -20,7 +20,7 @@
   max-width: 56rem;
   max-height: 550px;
   width: 100%;
-  min-width: 375px;
+  min-width: 400px;
   cursor: pointer;
 }
  
@@ -46,7 +46,6 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
-  min-width: 375px;
 }
 
 .project--cover:hover {
@@ -57,15 +56,17 @@
   position: absolute;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 1rem;
-  width: 15rem;
-  background-color: rgb(255, 255, 255, 0.7);
+  width: 20rem;
+  background-color: rgb(255, 255, 255);
   font-family: 'Source Code Pro', monospace;
   font-size: 12px;
+  border: none;
 }
 
 .modal--overlay{
@@ -88,14 +89,13 @@
 
 .modal--content input.error{
   height: 1.5rem;
-  background-color: rgba(255, 97, 97, 0.525);
+  background-color: rgba(255, 0, 0, 0.525);
 }
 
 .pass--btn{
-  height: 1.8rem;
+  height: 2rem;
   color: white;
   background-color: black;
   cursor: pointer;
   font-family: 'Source Code Pro', monospace;
 }
-
