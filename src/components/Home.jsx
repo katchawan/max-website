@@ -1,14 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/Home.css';
+import Modal from 'react-modal'
 import projects from '../data/projects';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-const Home = () => {
-  const navigate = useNavigate();
 
-  const handleProjectClick = (projectid) => {
-    navigate(`projectView/${projectid}`);
-  };
+const Home = (props) => {
+const [ isModalOpen, setIsModalOpen ] = useState(false)
+const [ password, setPassword ] = useState('')
+const [ selectedProject, setSelectedProject ] = useState(null)
+const [ passwordError, setPasswordError ] = useState(false)
+
+
+const navigate = useNavigate();
+
+const handleProjectClick = (project) => {
+  if (project.password) { 
+    props.setAuthenticated(true)
+    setSelectedProject(project)
+    setIsModalOpen(true)
+  } else {
+    navigate(`projectView/${project.id}`);
+  }
+};
+
+const handlePassword = () => {
+  if (password === selectedProject.password) {
+    navigate(`projectView/${selectedProject.id}`)
+  } else {
+    setPasswordError(true)
+    setIsModalOpen(true)
+    setPassword(password)
+    return;
+  }
+  setIsModalOpen(false)
+  setPassword('')
+}
 
   return (
     <motion.div 
@@ -19,16 +46,36 @@ const Home = () => {
     >
       <div className='all--projects--container'>
         {projects.map((project) => (
-          <div key={project.id} className='project--container'>
+          <div 
+          key={project.id} 
+          className='project--container'
+          >
             <img 
             className='project--cover' 
-            src={project.poster} 
-            alt='dentek'
-            onClick={() => handleProjectClick(project.id)}
+            src={project.poster}
+            alt='posterimage'
+            onClick={() => handleProjectClick(project)}
             /> 
             <h1 className='text--overlay'>{project.title}</h1>
           </div>
         ))}
+        <Modal
+          isOpen={isModalOpen}
+          onRequestClose={() => setIsModalOpen(false)}
+          contentLabel='Password Prompt'
+          className='modal--content'
+          overlayClassName='modal--overlay'
+          >
+            <h2>PASSWORD</h2>
+            <div className='input--btn'>
+            <input 
+            type='password' 
+            onChange={(e) => setPassword(e.target.value.toLowerCase())}
+            className={passwordError ? 'error' : ''}
+            />
+            <button className='pass--btn' onClick={handlePassword}>Submit</button>
+            </div>
+          </Modal>
       </div>
     </motion.div>
   );

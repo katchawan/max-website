@@ -3,11 +3,6 @@ import '../css/Contact.css';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
-  const emailAddress = 'coolkid79@gmail.com';
-
-  const handleEmailClick = () => {
-    window.location.href = `mailto:${emailAddress}`;
-  };
 
   return (
     <motion.div className='contact--page'
@@ -38,17 +33,9 @@ const Contact = () => {
         <textarea id="message" name="message" required></textarea>
         </div>
 
-        <button type="submit">Send Email</button>
+        <button type="submit" className='send--button'>Send Email</button>
 
     </form>
-
-      <p>
-        Alternatively, please send an email to{' '}
-        <a href={`mailto:${emailAddress}`} onClick={handleEmailClick}>
-          {emailAddress}
-        </a>
-        .
-      </p>
       </div>
     </motion.div>
   );

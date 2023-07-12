@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Source+Code+Pro:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arvo&family=Climate+Crisis&family=Inter&family=Josefin+Slab:wght@100&family=Sigmar&display=swap");
 /*
 font-family: 'Arvo', serif;
@@ -6,6 +6,8 @@ font-family: 'Climate Crisis', cursive;
 font-family: 'Inter', sans-serif;
 font-family: 'Josefin Slab', serif;
 font-family: 'Sigmar', cursive;
+font-family: 'Mulish', sans-serif;
+font-family: 'Source Code Pro', monospace;
 */
 * {
   margin: 0;

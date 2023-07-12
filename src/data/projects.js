@@ -1,109 +1,222 @@
 const projects = [
     {
-      id: '1',
-      title: "Stray kitties",
+      id: "1",
+      password: "yes123",
+      title: "elden ring",
+      company: "Kitty company",
+      poster: "/photos/eldenring.png",
+      source: "/videos/oralkit.mp4",
+      tools: "I used a hammer and screwdriver",
+      description: "a bunch of random text is going right where im typing right now blah bloo bloo this project was made while wearing an eyepatch",
+      more: "This is a random message to show how it can have a place inbetween images",
+      imgs: [
+        "/photos/birds.png",
+        "/photos/bottles.png",
+        "/photos/buffalo.png",
+        "/photos/cabin.png",
+        "/photos/dentek.png",
+        "/photos/fandog.png",
+        "/photos/blue.jpg"
+      ],
+    },
+
+    {
+      id: "2",
+      password: "no123",
+      title: "birds",
+      company: "Kitty company",
+      poster: "/photos/birds.png",
+      source: "/videos/oralkit.mp4",
+      tools: "I used a hammer and screwdriver",
+      description: "a bunch of random text is going right where im typing right now blah bloo bloo this project was made while wearing an eyepatch",
+      more: "",
+      imgs: [
+        "/photos/birds.png",
+        "/photos/bottles.png",
+        "/photos/buffalo.png",
+        "/photos/cabin.png",
+        "",
+        ""
+      ], 
+    },
+    {
+      id: "3",
+      password: "",
+      title: "bottles",
+      company: "Kitty company",
+      poster: "/photos/bottles.png",
+      source: "/videos/oralkit.mp4",
+      tools: "I used a hammer and screwdriver",
+      description: "a bunch of random text is going right where im typing right now blah bloo bloo this project was made while wearing an eyepatch",
+      more: "",
+      imgs: [
+        "/photos/birds.png",
+        "/photos/bottles.png",
+        "/photos/buffalo.png",
+        "/photos/cabin.png", 
+        "/photos/dentek.png",
+        "/photos/fandog.png",
+        "/photos/blue.jpg"
+      ],
+    },
+    {
+      id: "4",
+      password: "",
+      title: "buffalos",
+      company: "Kitty company",
+      poster: "/photos/buffalo.png",
+      source: "/videos/oralkit.mp4",
+      tools: "I used a hammer and screwdriver",
+      description: "a bunch of random text is going right where im typing right now blah bloo bloo this project was made while wearing an eyepatch",
+      more: "",
+      imgs: [
+        "/photos/birds.png", 
+        "/photos/bottles.png",
+        "/photos/buffalo.png",
+        "/photos/cabin.png",
+        "/photos/dentek.png",
+        "/photos/fandog.png",
+        "", //big image
+        "/photos/buffalo.png",
+        "/photos/cabin.png",
+        "/photos/dentek.png",
+        "/photos/fandog.png"
+      ],
+    },
+    {
+      id: "5",
+      password: "",
+      title: "cabin",
+      company: "Kitty company",
+      poster: "/photos/cabin.png",
+      source: "/videos/oralkit.mp4",
+      tools: "I used a hammer and screwdriver",
+      description: "a bunch of random text is going right where im typing right now blah bloo bloo this project was made while wearing an eyepatch",
+      more: "",
+      imgs: [
+        "/photos/birds.png",
+        "/photos/bottles.png",
+        "/photos/buffalo.png",
+        "/photos/cabin.png",
+        "/photos/dentek.png",
+        "/photos/fandog.png"
+      ],
+    },
+    {
+      id: "6",
+      password: "",
+      title: "dentek",
+      company: "Kitty company",
+      poster: "/photos/dentek.png",
+      source: "/videos/oralkit.mp4",
+      tools: "I used a hammer and screwdriver",
+      description: "a bunch of random text is going right where im typing right now blah bloo bloo this project was made while wearing an eyepatch",
+      more: "",
+      imgs: [
+        "/photos/birds.png",
+        "/photos/bottles.png",
+        "/photos/buffalo.png",
+        "/photos/cabin.png",
+        "/photos/dentek.png",
+        "/photos/fandog.png"
+      ], 
+    },
+    {
+      id: "7",
+      password: "",
+      title: "moose",
+      company: "Kitty company",
+      poster: "/photos/moose.png",
+      source: "/videos/oralkit.mp4",
+      tools: "I used a hammer and screwdriver",
+      description: "a bunch of random text is going right where im typing right now blah bloo bloo this project was made while wearing an eyepatch",
+      more: "",
+      imgs: [
+        "/photos/birds.png",
+        "/photos/bottles.png",
+        "/photos/buffalo.png",
+        "/photos/cabin.png",
+        "/photos/dentek.png",
+        "/photos/fandog.png"
+      ],
+    },
+    {
+      id: "8",
+      password: "",
+      title: "cats",
       company: "Kitty company",
       poster: "/photos/stray.jpeg",
       source: "/videos/oralkit.mp4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      tools: "I used a hammer and screwdriver",
+      description: "a bunch of random text is going right where im typing right now blah bloo bloo this project was made while wearing an eyepatch",
+      more: "",
+      imgs: [
+        "/photos/birds.png",
+        "/photos/bottles.png",
+        "/photos/buffalo.png",
+        "/photos/cabin.png",
+        "/photos/dentek.png",
+        "/photos/fandog.png"
+      ],
     },
-
     {
-      id: '2',
-      title: "Yellow Teeth",
-      company: "Dental company",
-      poster: "/photos/dentek.png",
-      source: "/videos/Teaser.mp4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-
-    {
-      id: '3',
-      title: "Stray kitties3",
+      id: "9",
+      password: "",
+      title: "trees",
       company: "Kitty company",
-      poster: "/photos/stray.jpeg",
+      poster: "/photos/trees.png",
       source: "/videos/oralkit.mp4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      tools: "I used a hammer and screwdriver",
+      description: "a bunch of random text is going right where im typing right now blah bloo bloo this project was made while wearing an eyepatch",
+      more: "",
+      imgs: [
+        "/photos/birds.png",
+        "/photos/bottles.png",
+        "/photos/buffalo.png",
+        "/photos/cabin.png",
+        "/photos/dentek.png",
+        "/photos/fandog.png"
+      ],
     },
-
     {
-      id: '4',
-      title: "Yellow Teeth4",
-      company: "Dental company",
-      poster: "/photos/dentek.png",
-      source: "/videos/Teaser.mp4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-      id: '5',
-      title: "Stray kitties",
+      id: "10",
+      password: "",
+      title: "fandog",
       company: "Kitty company",
-      poster: "/photos/stray.jpeg",
+      poster: "/photos/fandog.png",
       source: "/videos/oralkit.mp4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      tools: "I used a hammer and screwdriver",
+      description: "a bunch of random text is going right where im typing right now blah bloo bloo this project was made while wearing an eyepatch",
+      more: "",
+      imgs: [
+        "/photos/birds.png",
+        "/photos/bottles.png",
+        "/photos/buffalo.png",
+        "/photos/cabin.png",
+        "/photos/dentek.png",
+        "/photos/fandog.png"
+      ],
     },
-
     {
-      id: '6',
-      title: "Yellow Teeth",
-      company: "Dental company",
-      poster: "/photos/dentek.png",
-      source: "/videos/Teaser.mp4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-
-    {
-      id: '7',
-      title: "Stray kitties3",
+      id: "11",
+      password: "",
+      title: "fandog",
       company: "Kitty company",
-      poster: "/photos/stray.jpeg",
+      poster: "/photos/fandog.png",
       source: "/videos/oralkit.mp4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-
-    {
-      id: '8',
-      title: "Yellow Teeth4",
-      company: "Dental company",
-      poster: "/photos/dentek.png",
-      source: "/videos/Teaser.mp4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-      id: '9',
-      title: "Stray kitties",
-      company: "Kitty company",
-      poster: "/photos/stray.jpeg",
-      source: "/videos/oralkit.mp4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-
-    {
-      id: '10',
-      title: "Yellow Teeth",
-      company: "Dental company",
-      poster: "/photos/dentek.png",
-      source: "/videos/Teaser.mp4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-
-    {
-      id: '11',
-      title: "Stray kitties3",
-      company: "Kitty company",
-      poster: "/photos/stray.jpeg",
-      source: "/videos/oralkit.mp4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-
-    {
-      id: '12',
-      title: "Yellow Teeth4",
-      company: "Dental company",
-      poster: "/photos/dentek.png",
-      source: "/videos/Teaser.mp4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      tools: "I used a hammer and screwdriver",
+      description: "a bunch of random text is going right where im typing right now blah bloo bloo this project was made while wearing an eyepatch",
+      more: "",
+      imgs: [
+        "/photos/birds.png",
+        "/photos/bottles.png",
+        "/photos/buffalo.png",
+        "/photos/cabin.png",
+        "/photos/dentek.png",
+        "/photos/fandog.png"
+      ],
     }
+
 ];
 
 export default projects
