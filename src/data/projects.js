@@ -74,13 +74,13 @@ const projects = [
         "/photos/bottles.png",
         "/photos/buffalo.png",
         "/photos/cabin.png",
-        "/photos/dentek.png",
-        "/photos/fandog.png",
-        "", //big image
-        "/photos/buffalo.png",
-        "/photos/cabin.png",
-        "/photos/dentek.png",
-        "/photos/fandog.png"
+        "",
+        "",
+        "", 
+        "",
+        "",
+        "",
+        ""
       ],
     },
     {
