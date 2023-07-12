@@ -7,16 +7,16 @@ import {
     ProjectView 
 } from './index';
 
-const CompTransitions = (props) => {
+const CompTransitions = () => {
   const location = useLocation();
-  const [ authenticated, setAuthenticated] = useState(false)
-  const { isNavbarClick, setIsNavbarClick} = props
+  const [ authenticated, setAuthenticated ] = useState(false)
+
   return (
     <AnimatePresence onExitComplete={() => window.scrollTo(0, 0)}>
       <Routes location={location} key={location.pathname}>
         <Route path='/' element={<Home setAuthenticated={setAuthenticated}/>}/>
         <Route path='/contact' element={<Contact />}/>
-        <Route path='/projectView/:id' element={<ProjectView setIsNavbarClick={setIsNavbarClick} authenticated={authenticated} isNavbarClick={isNavbarClick}/>}/>
+        <Route path='/projectView/:id' element={<ProjectView authenticated={authenticated} />}/>
       </Routes>
     </AnimatePresence>
   )
