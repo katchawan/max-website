@@ -44,20 +44,21 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 25px;
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
 
 .project--photo {
-    width: 40%;
-    min-width: 400px;
-    min-height: 600px;
-    max-height: 600px;
+  max-width: 56rem;
+  max-height: 550px;
+  min-height: 400px;
+  width: 100%;
+  min-width: 360px;
 }
 
 .more {
-    width: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 5rem;
