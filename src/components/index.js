@@ -1,11 +1,8 @@
-import Contact from './Contact'
 import Home from './Home'
 import Nav from './Nav'
-import ProjectView from './ProjectView'
-
+import Labs from './Labs'
 export {
-    Contact,
     Home,
     Nav,
-    ProjectView
+    Labs
 }
