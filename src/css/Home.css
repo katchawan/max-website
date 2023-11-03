@@ -23,6 +23,54 @@
   flex: 0 0 calc(50% - 30px);
 }
 
+.project--container--locked {
+  max-width: 800px;
+  flex: 0 0 calc(50% - 30px);
+  position: relative;
+}
+
+.password-input-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+input {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 2rem;
+  font-size: larger;
+}
+
+.wrong-password {
+  background-color: rgba(247, 101, 101, 0.7);
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  font-size: larger;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
 .video--cover {
   width: 100%;
+}
+
+.cover {
+  width: 100%;
+  filter: blur(4px);
 }

@@ -21,6 +21,7 @@ const projects = [
     {
       id: "1",
       password: "yes123",
+      hasPassword: true,
       company: "Kitty company",
       poster: space,
       source: video1,
@@ -28,6 +29,7 @@ const projects = [
     {
       id: "2",
       password: "no123",
+      hasPassword: true,
       company: "Kitty company",
       poster: space2,
       source: video2,
@@ -35,6 +37,7 @@ const projects = [
     {
       id: "3",
       password: "",
+      hasPassword: false,
       company: "Kitty company",
       poster: space3,
       source: video3,
@@ -42,6 +45,7 @@ const projects = [
     {
       id: "4",
       password: "",
+      hasPassword: false,
       company: "Kitty company",
       poster: space4,
       source: video4,
@@ -49,6 +53,7 @@ const projects = [
     {
       id: "5",
       password: "",
+      hasPassword: false,
       company: "Kitty company",
       poster: space5,
       source: video2,
@@ -56,6 +61,7 @@ const projects = [
     {
       id: "6",
       password: "",
+      hasPassword: false,
       company: "Kitty company",
       poster: space6,
       source: video3,
