@@ -33,7 +33,6 @@ const Home = () => {
               <div key={project.id} className="project--container--locked">
                 <img src={project.poster} alt="poster" className="cover" />
                 <div className="password-input-container">
-                  <h1 className="locked">LOCKED</h1>
                   <div className="input--button--container">
                   <input
                     type="password"
