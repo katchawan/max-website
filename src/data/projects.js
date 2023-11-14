@@ -1,70 +1,75 @@
 //photos you import here, separate by comma
 import {
-  space,
-  space2,
-  space3,
-  space4,
-  space5,
-  space6
+  CoxBiz,
+  CoxCon,
+  Dentek,
+  Harley,
+  Stray,
+  Ubrelvy,
+  Xfinity,
+  insta
 } from '../assets'
 
 //videos imported here, separated by comma
 import {
-  video1,
-  video2,
-  video3,
-  video4
+  CoxBizVid,
+  CoxConVid,
+  DentekVid,
+  HarleyVid,
+  StrayVid,
+  UbrelvyVid,
+  XfinityVid
 } from '../assets'
 
 //each project is separated by a bracket and comma
 const projects = [
     {
       id: "1",
-      password: "yes123",
+      password: "anj123",
       hasPassword: true,
-      company: "Kitty company",
-      poster: space,
-      source: video1,
+      company: "Harley",
+      poster: Harley,
+      source: HarleyVid,
     },
     {
       id: "2",
-      password: "no123",
-      hasPassword: true,
-      company: "Kitty company",
-      poster: space2,
-      source: video2,
+      password: "",
+      hasPassword: false,
+      company: "Stray",
+      poster: Stray,
+      source: HarleyVid,
     },
     {
       id: "3",
       password: "",
       hasPassword: false,
-      company: "Kitty company",
-      poster: space3,
-      source: video3,
+      company: "Xfinity",
+      poster: Xfinity,
+      source: XfinityVid,
     },
     {
       id: "4",
       password: "",
       hasPassword: false,
-      company: "Kitty company",
-      poster: space4,
-      source: video4,
+      company: "Cox Biz",
+      poster: CoxBiz,
+      source: CoxBizVid,
     },
     {
       id: "5",
       password: "",
       hasPassword: false,
-      company: "Kitty company",
-      poster: space5,
-      source: video2,
+      company: "Ubrelvy",
+      poster: Ubrelvy,
+      source: UbrelvyVid,
     },
     {
       id: "6",
       password: "",
       hasPassword: false,
-      company: "Kitty company",
-      poster: space6,
-      source: video3,
+      company: "Dentek",
+      poster: Dentek,
+      source: DentekVid,
     }
 ];
 
