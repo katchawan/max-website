@@ -37,7 +37,7 @@ const projects = [
       hasPassword: false,
       company: "Stray",
       poster: Stray,
-      source: HarleyVid,
+      source: StrayVid,
     },
     {
       id: "3",
@@ -51,9 +51,9 @@ const projects = [
       id: "4",
       password: "",
       hasPassword: false,
-      company: "Cox Biz",
-      poster: CoxBiz,
-      source: CoxBizVid,
+      company: "Cox Con",
+      poster: CoxCon,
+      source: CoxConVid,
     },
     {
       id: "5",
@@ -70,6 +70,14 @@ const projects = [
       company: "Dentek",
       poster: Dentek,
       source: DentekVid,
+    },
+    {
+      id: "7",
+      password: "",
+      hasPassword: false,
+      company: "CoxBiz",
+      poster: CoxBiz,
+      source: CoxBizVid,
     }
 ];
 
