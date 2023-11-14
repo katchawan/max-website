@@ -29,7 +29,7 @@ const projects = [
       hasPassword: true,
       company: "Harley",
       poster: Harley,
-      source: HarleyVid,
+      source: Harley,
     },
     {
       id: "2",
