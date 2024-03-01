@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: row;
   margin-right: 25px;
-  gap: 50px;
+  gap: 20px;
   align-items: center;
   transition: 0.3s;
 }
@@ -43,11 +43,11 @@
   margin: 0;
   padding: 0;
   font-size: 25px;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .insta--logo {
-  width: 25px;
+  width: 18px;
   margin-top: 5px;
 }
 
@@ -57,7 +57,7 @@
 
 .linked--in {
   font-size: 20px;
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
 

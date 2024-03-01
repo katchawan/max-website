@@ -25,11 +25,11 @@ import {
 const projects = [
     {
       id: "1",
-      password: "anj123",
-      hasPassword: true,
+      password: "",
+      hasPassword: false,
       company: "Harley",
       poster: Harley,
-      source: Harley,
+      source: HarleyVid,
     },
     {
       id: "2",
